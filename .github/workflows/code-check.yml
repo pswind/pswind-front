@@ -1,0 +1,33 @@
+name: Code Check [Lint, TypeCheck]
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'yarn'
+    - name: Configure .npmrc
+      uses: bduff9/use-npmrc@v1.1
+      with:
+        dot-npmrc: ${{ secrets.DOT_NPMRC }}
+    - name: Install modules
+      run: yarn install
+    - name: Run TypeScript type check
+      run: yarn run typecheck
+    - name: Run ESlint
+      run: yarn run lint:changed

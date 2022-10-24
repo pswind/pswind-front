@@ -7,6 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "typecheck": "tsc --project tsconfig.json",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:changed": "eslint $(git diff --name-only --diff-filter=ACMRTUXB \"$(git merge-base HEAD origin/main)\" | grep -E \"\\.(ts|tsx|js|jsx)$\") --max-warnings=0"
   },
