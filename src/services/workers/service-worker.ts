@@ -1,5 +1,6 @@
+/* eslint-disable prefer-regex-literals */
+/* eslint-disable no-underscore-dangle */
 /// <reference lib="webworker" />
-/* eslint-disable no-restricted-globals */
 
 // This service worker can be customized!
 // See https://developers.google.com/web/tools/workbox/modules
@@ -50,7 +51,7 @@ registerRoute(
     // Return true to signal that we want to use the handler.
     return true;
   },
-  createHandlerBoundToURL(process.env.PUBLIC_URL + '/index.html')
+  createHandlerBoundToURL(`${process.env.PUBLIC_URL}/index.html`),
 );
 
 // An example runtime caching route for requests that aren't handled by the
@@ -66,7 +67,7 @@ registerRoute(
       // least-recently used images are removed.
       new ExpirationPlugin({ maxEntries: 50 }),
     ],
-  })
+  }),
 );
 
 // This allows the web app to trigger skipWaiting via
