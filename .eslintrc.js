@@ -47,8 +47,8 @@ module.exports = {
     'react/jsx-uses-react': 'off', // react 17+ doesn't need react imports
     'react/react-in-jsx-scope': 'off', // react 17+ doesn't need react imports
     'eol-last': ['error', 'always'],
-    'import/no-unresolved': 'off', // todo
-    'import/named': 'off',
-    'import/extensions': 'off',
+    'import/named': ['off'],
+    'import/extensions': ['off'],
+    'import/no-unresolved': ['off'],
   },
 };
