@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import * as serviceWorkerRegistration from './services/workers/serviceWorkerRegistration';
 import reportWebVitals from './services/workers/reportWebVitals';
-import { Test } from './modules';
+import { App } from './app';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <React.StrictMode>
-    <Test />
+    <App />
   </React.StrictMode>,
 );
 

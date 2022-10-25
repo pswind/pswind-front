@@ -1,5 +1,7 @@
+import { Button } from '@nextui-org/react';
+
 export const Test = () => (
   <div>
-    <p>hello</p>
+    <Button>hello</Button>
   </div>
 );
