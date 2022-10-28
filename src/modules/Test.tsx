@@ -2,6 +2,6 @@ import { Button } from '@nextui-org/react';
 
 export const Test = () => (
   <div>
-    <Button>hello world</Button>
+    <Button1>hello world</Button1>
   </div>
 );
