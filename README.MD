@@ -5,7 +5,7 @@
 ## Setup
 
 - instal yarn
-- close repo
+- clone repo
 - [create .npmrc file with you token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - install node_modules
 - yarn start
